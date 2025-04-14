@@ -1,8 +1,8 @@
 import React from "react";
 import "./SocialMedia.scss";
-import {socialMediaLinks} from "../../portfolio";
+import { socialMediaLinks } from "../../portfolio";
 
-export default function socialMedia() {
+export default function SocialMedia() { // Changed function name to follow standard React naming conventions
   if (!socialMediaLinks.display) {
     return null;
   }
@@ -35,7 +35,7 @@ export default function socialMedia() {
       {socialMediaLinks.gmail ? (
         <a
           href={`mailto:${socialMediaLinks.gmail}`}
-          className="icon-button google"
+          className="icon-button google" // Keep class 'google' for general email or change if desired
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -43,6 +43,7 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null}
+
 
       {socialMediaLinks.gitlab ? (
         <a
@@ -127,6 +128,7 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null}
-    </div>
+
+    </div> // Moved the closing div tag here
   );
 }
